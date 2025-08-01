@@ -1,0 +1,386 @@
+import { Dimensions, StyleSheet } from 'react-native';
+import { BORDER_RADIUS, COLORS, FONT_SIZES, FONT_WEIGHTS, SPACING } from '../constants';
+
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
+
+export const pomodoroStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  backgroundElements: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  floatingElement: {
+    position: 'absolute',
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    backgroundColor: '#E8E8E8',
+  },
+  headerContainer: {
+    paddingTop: 60,
+    paddingHorizontal: SPACING.XL,
+    paddingBottom: 40,
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  brandSection: {
+    flex: 1,
+  },
+  logoContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  zenCircle: {
+    width: SPACING.SM,
+    height: SPACING.SM,
+    borderRadius: SPACING.XS,
+    backgroundColor: COLORS.SECONDARY_TEXT,
+    marginRight: SPACING.LG,
+  },
+  brandTitle: {
+    fontSize: FONT_SIZES.BRAND,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    color: COLORS.PRIMARY_TEXT,
+    letterSpacing: 2,
+  },
+  settingsButton: {
+    padding: SPACING.LG,
+  },
+  settingsIcon: {
+    flexDirection: 'row',
+    gap: 3,
+  },
+  settingsDot: {
+    width: 3,
+    height: 3,
+    borderRadius: 1.5,
+    backgroundColor: COLORS.TERTIARY_TEXT,
+  },
+  mainContent: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: SPACING.XL,
+  },
+  topSection: {
+    paddingHorizontal: SPACING.XL,
+    paddingTop: SPACING.LG,
+    alignItems: 'center',
+  },
+  centerSection: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: SPACING.XL,
+  },
+  bottomSection: {
+    paddingHorizontal: SPACING.XL,
+    paddingBottom: SPACING.XXL,
+    alignItems: 'center',
+    gap: SPACING.XL,
+  },
+  modeSection: {
+    marginBottom: 0,
+  },
+  modeSelector: {
+    flexDirection: 'row',
+    gap: SPACING.XL,
+    justifyContent: 'center',
+  },
+  modeButton: {
+    alignItems: 'center',
+    paddingVertical: SPACING.LG,
+    paddingHorizontal: SPACING.SM,
+  },
+  modeIndicatorDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    marginBottom: SPACING.SM,
+  },
+  modeButtonText: {
+    fontSize: FONT_SIZES.SM,
+    fontWeight: FONT_WEIGHTS.MEDIUM,
+    color: COLORS.TERTIARY_TEXT,
+    letterSpacing: 1,
+  },
+  timerSection: {
+    alignItems: 'center',
+    marginBottom: 0,
+  },
+  timerContainer: {
+    position: 'relative',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  progressCircle: {
+    position: 'absolute',
+  },
+  timerDisplay: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: SPACING.SM,
+    marginTop: SPACING.SM,
+  },
+  timeText: {
+    fontSize: FONT_SIZES.TIMER,
+    fontWeight: FONT_WEIGHTS.LIGHT,
+    color: COLORS.PRIMARY_TEXT,
+    fontFamily: 'System',
+    letterSpacing: 1,
+    marginBottom: SPACING.SM,
+  },
+  modeLabel: {
+    fontSize: FONT_SIZES.MD,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    letterSpacing: 1,
+  },
+  celebration: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  celebrationCircle: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: COLORS.BACKGROUND_LIGHT,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.BORDER_LIGHT,
+  },
+  celebrationText: {
+    fontSize: FONT_SIZES.XL,
+    color: COLORS.SECONDARY_TEXT,
+  },
+  controlSection: {
+    marginBottom: 0,
+  },
+  controlButtons: {
+    flexDirection: 'row',
+    gap: SPACING.LG,
+    justifyContent: 'center',
+  },
+  controlButton: {
+    paddingVertical: SPACING.MD,
+    paddingHorizontal: SPACING.XL,
+    borderRadius: BORDER_RADIUS.XXL,
+    minWidth: 100,
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontSize: FONT_SIZES.LG,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    color: COLORS.WHITE,
+    letterSpacing: 1,
+  },
+  secondaryButton: {
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: COLORS.BORDER_LIGHT,
+  },
+  secondaryButtonText: {
+    fontSize: FONT_SIZES.LG,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    color: COLORS.SECONDARY_TEXT,
+    letterSpacing: 1,
+  },
+  progressSection: {
+    alignItems: 'center',
+  },
+  sessionInfo: {
+    marginBottom: SPACING.MD,
+  },
+  sessionText: {
+    fontSize: FONT_SIZES.SM,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    color: COLORS.TERTIARY_TEXT,
+    letterSpacing: 1,
+  },
+  progressIndicators: {
+    flexDirection: 'row',
+    gap: SPACING.SM,
+  },
+  progressDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: COLORS.BORDER_LIGHT,
+  },
+});
+
+export const modalStyles = StyleSheet.create({
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: COLORS.MODAL_OVERLAY,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  settingsModal: {
+    backgroundColor: COLORS.WHITE,
+    borderTopLeftRadius: BORDER_RADIUS.XXL,
+    borderTopRightRadius: BORDER_RADIUS.XXL,
+    padding: 0,
+    width: screenWidth,
+    maxHeight: screenHeight * 0.75,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: -4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+    elevation: 12,
+  },
+  modalHeader: {
+    alignItems: 'center',
+    paddingTop: SPACING.MD,
+    paddingHorizontal: SPACING.XL,
+    paddingBottom: SPACING.LG,
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.BACKGROUND_LIGHT,
+  },
+  modalHandle: {
+    width: 36,
+    height: 4,
+    backgroundColor: COLORS.BORDER_LIGHT,
+    borderRadius: 2,
+    marginBottom: 20,
+  },
+  settingsTitle: {
+    fontSize: FONT_SIZES.XXL,
+    fontWeight: FONT_WEIGHTS.MEDIUM,
+    color: COLORS.PRIMARY_TEXT,
+    marginBottom: SPACING.SM,
+    letterSpacing: 1,
+  },
+  settingsSubtitle: {
+    fontSize: FONT_SIZES.MD,
+    color: COLORS.TERTIARY_TEXT,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    letterSpacing: 0.5,
+  },
+  settingsList: {
+    paddingHorizontal: SPACING.XL,
+    paddingVertical: SPACING.LG,
+  },
+  settingRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: SPACING.XL,
+    paddingVertical: 4,
+  },
+  settingInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  settingIconContainer: {
+    marginRight: SPACING.MD,
+  },
+  settingModeIndicator: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+  },
+  settingTextContainer: {
+    flex: 1,
+  },
+  settingModeTitle: {
+    fontSize: FONT_SIZES.LG,
+    color: COLORS.PRIMARY_TEXT,
+    fontWeight: FONT_WEIGHTS.MEDIUM,
+    marginBottom: 4,
+    letterSpacing: 0.5,
+  },
+  settingModeDesc: {
+    fontSize: FONT_SIZES.SM,
+    color: COLORS.TERTIARY_TEXT,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    letterSpacing: 0.5,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  timeInputWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: COLORS.BACKGROUND_MEDIUM,
+    borderRadius: BORDER_RADIUS.LG,
+    paddingHorizontal: SPACING.MD,
+    paddingVertical: SPACING.SM,
+    borderWidth: 1,
+    borderColor: COLORS.BORDER_MEDIUM,
+  },
+  timeInput: {
+    fontSize: FONT_SIZES.LG,
+    fontWeight: FONT_WEIGHTS.MEDIUM,
+    color: COLORS.PRIMARY_TEXT,
+    textAlign: 'center',
+    minWidth: 32,
+    padding: 0,
+  },
+  inputUnit: {
+    fontSize: FONT_SIZES.SM,
+    color: COLORS.TERTIARY_TEXT,
+    marginLeft: SPACING.SM,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    letterSpacing: 0.5,
+  },
+  modalActions: {
+    flexDirection: 'row',
+    paddingHorizontal: SPACING.XL,
+    paddingVertical: SPACING.LG,
+    gap: SPACING.MD,
+    borderTopWidth: 1,
+    borderTopColor: COLORS.BACKGROUND_LIGHT,
+  },
+  resetButton: {
+    flex: 1,
+    paddingVertical: SPACING.MD,
+    backgroundColor: 'transparent',
+    borderRadius: BORDER_RADIUS.XL,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.BORDER_MEDIUM,
+  },
+  resetButtonText: {
+    color: COLORS.TERTIARY_TEXT,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    fontSize: FONT_SIZES.MD,
+    letterSpacing: 0.5,
+  },
+  saveButton: {
+    flex: 2,
+    paddingVertical: SPACING.MD,
+    backgroundColor: COLORS.PRIMARY_TEXT,
+    borderRadius: BORDER_RADIUS.XL,
+    alignItems: 'center',
+  },
+  saveButtonText: {
+    color: COLORS.WHITE,
+    fontWeight: FONT_WEIGHTS.MEDIUM,
+    fontSize: FONT_SIZES.MD,
+    letterSpacing: 0.5,
+  },
+  tipContainer: {
+    paddingHorizontal: SPACING.XL,
+    paddingBottom: SPACING.XL,
+    alignItems: 'center',
+  },
+  tipText: {
+    fontSize: FONT_SIZES.SM,
+    color: COLORS.TERTIARY_TEXT,
+    fontWeight: FONT_WEIGHTS.NORMAL,
+    letterSpacing: 0.5,
+    textAlign: 'center',
+  },
+});
