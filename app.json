@@ -37,6 +37,19 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "036dee85-0306-4ad5-a402-71c095b5ec8a"
+      }
+    },
+    "owner": "siriwatchr",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/036dee85-0306-4ad5-a402-71c095b5ec8a"
     }
   }
 }
